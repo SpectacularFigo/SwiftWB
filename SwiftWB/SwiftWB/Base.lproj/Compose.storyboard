@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="nT9-1t-Qch">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Root View Controller-->
+        <scene sceneID="xca-0z-rQN">
+            <objects>
+                <tableViewController id="sm0-kb-H85" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" title="Root View Controller" id="wX6-A4-Ff9"/>
+                </tableViewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="j1X-0e-L8a" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1383" y="443"/>
+        </scene>
+        <!--Item-->
+        <scene sceneID="ytO-qF-MdR">
+            <objects>
+                <navigationController id="nT9-1t-Qch" sceneMemberID="viewController">
+                    <tabBarItem key="tabBarItem" title="Item" id="pB1-ze-Ez6"/>
+                    <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Uwr-yh-rV5">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="sm0-kb-H85" kind="relationship" relationship="rootViewController" id="Smk-CF-0eO"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cTl-dR-9Bd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2337" y="443"/>
+        </scene>
+    </scenes>
+</document>
