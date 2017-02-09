@@ -10,12 +10,23 @@ import UIKit
 
 class FHVisitorView: UIView {
 
-    /*
-    // Only override draw() if you perform custom drawing.
-    // An empty implementation adversely affects performance during animation.
-    override func draw(_ rect: CGRect) {
-        // Drawing code
+    
+
+    
+    class func visitorView() -> FHVisitorView {
+        return Bundle.main.loadNibNamed("visitorView", owner: nil, options: nil)!.first as! FHVisitorView
     }
-    */
+  
+    @IBAction func registerButtonClick(_ sender: UIButton) {
+        print("Register")
+    }
+    
+    @IBAction func loginButtonClick(_ sender: UIButton) {
+         print("login")
+        
+    }
+ 
+    
+
 
 }

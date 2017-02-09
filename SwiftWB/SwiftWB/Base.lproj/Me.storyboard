@@ -12,18 +12,18 @@
         <!--Me-->
         <scene sceneID="OYg-xK-aE4">
             <objects>
-                <tableViewController id="vKG-mn-IHN" sceneMemberID="viewController">
+                <tableViewController id="vKG-mn-IHN" customClass="FHProfileTableViewController" customModule="SwiftWB" customModuleProvider="target" sceneMemberID="viewController">
                     <navigationItem key="navigationItem" title="Me" id="SoU-Ts-Xg3"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ssh-vz-AsA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="508" y="369"/>
         </scene>
-        <!--Item-->
+        <!--Me-->
         <scene sceneID="FqP-he-gb7">
             <objects>
                 <navigationController id="hGQ-2I-0s1" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="SwE-2Y-6R3"/>
+                    <tabBarItem key="tabBarItem" title="Me" image="tabbar_profile" selectedImage="tabbar_profile_highlighted" id="SwE-2Y-6R3"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="PHs-TH-f3g">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -38,4 +38,8 @@
             <point key="canvasLocation" x="-446" y="369"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabbar_profile" width="30" height="30"/>
+        <image name="tabbar_profile_highlighted" width="30" height="30"/>
+    </resources>
 </document>

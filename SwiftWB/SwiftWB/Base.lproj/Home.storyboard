@@ -12,7 +12,7 @@
         <!--Home-->
         <scene sceneID="53y-g2-HTx">
             <objects>
-                <tableViewController id="RAR-hk-GfS" sceneMemberID="viewController">
+                <tableViewController id="RAR-hk-GfS" customClass="FHHomeTableViewController" customModule="SwiftWB" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="Wie-pZ-n9o">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -29,11 +29,11 @@
             </objects>
             <point key="canvasLocation" x="537" y="-649"/>
         </scene>
-        <!--Item-->
+        <!--Home-->
         <scene sceneID="bNY-8d-rII">
             <objects>
                 <navigationController id="77t-hI-5qM" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="aFx-VM-36i"/>
+                    <tabBarItem key="tabBarItem" title="Home" image="tabbar_home" selectedImage="tabbar_home_highlighted" id="aFx-VM-36i"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="Di2-0j-Ics">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -48,4 +48,8 @@
             <point key="canvasLocation" x="-418" y="-649"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabbar_home" width="30" height="30"/>
+        <image name="tabbar_home_highlighted" width="30" height="30"/>
+    </resources>
 </document>

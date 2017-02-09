@@ -12,7 +12,7 @@
         <!--Search-->
         <scene sceneID="ldx-ec-7Qe">
             <objects>
-                <tableViewController id="wfC-FX-Nl8" sceneMemberID="viewController">
+                <tableViewController id="wfC-FX-Nl8" customClass="FHDiscoverTableViewController" customModule="SwiftWB" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6zU-Zs-bBw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="28" width="375" height="44"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="gvW-QB-PVX" id="igO-LF-7Ur">
-                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                 </tableViewCellContentView>
                             </tableViewCell>
@@ -38,11 +38,11 @@
             </objects>
             <point key="canvasLocation" x="631" y="209"/>
         </scene>
-        <!--Item-->
+        <!--Search-->
         <scene sceneID="dRH-u9-ymm">
             <objects>
                 <navigationController id="sLR-DI-BQq" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="Ivc-Ql-ZwH"/>
+                    <tabBarItem key="tabBarItem" title="Search" image="tabbar_discover" selectedImage="tabbar_discover_highlighted" id="Ivc-Ql-ZwH"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="7qV-B8-Dtz">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -57,4 +57,8 @@
             <point key="canvasLocation" x="-177" y="210"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabbar_discover" width="30" height="30"/>
+        <image name="tabbar_discover_highlighted" width="30" height="30"/>
+    </resources>
 </document>

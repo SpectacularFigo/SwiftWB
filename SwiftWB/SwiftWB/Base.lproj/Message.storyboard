@@ -12,7 +12,7 @@
         <!--Message-->
         <scene sceneID="OSC-iO-o2r">
             <objects>
-                <tableViewController id="spp-aO-MAl" sceneMemberID="viewController">
+                <tableViewController id="spp-aO-MAl" customClass="FHMessageTableViewController" customModule="SwiftWB" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="06h-q6-Dnk">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -28,11 +28,11 @@
             </objects>
             <point key="canvasLocation" x="399" y="801"/>
         </scene>
-        <!--Item-->
+        <!--Message-->
         <scene sceneID="8pz-xI-LBz">
             <objects>
                 <navigationController id="6MO-Lp-aZp" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="2x2-16-SI4"/>
+                    <tabBarItem key="tabBarItem" title="Message" image="tabbar_message_center" selectedImage="tabbar_message_center_highlighted" id="2x2-16-SI4"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="xxa-J5-1Qg">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -47,4 +47,8 @@
             <point key="canvasLocation" x="-554" y="801"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="tabbar_message_center" width="30" height="30"/>
+        <image name="tabbar_message_center_highlighted" width="30" height="30"/>
+    </resources>
 </document>
