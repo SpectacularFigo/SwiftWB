@@ -62,7 +62,6 @@ extension FHHomeTableViewController
     
 }
 
-
 // MARK:- Events
 extension FHHomeTableViewController
 {
