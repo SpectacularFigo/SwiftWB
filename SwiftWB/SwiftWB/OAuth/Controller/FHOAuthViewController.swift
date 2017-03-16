@@ -8,18 +8,24 @@
 
 import UIKit
 import SVProgressHUD
+import Alamofire
+import YYKit
 class FHOAuthViewController: UIViewController , UIWebViewDelegate{
+    
     
     @IBOutlet weak var oauthWebView: UIWebView!
     var tempURLStringArray = [String]()
+    var time = 1
     override func viewDidLoad() {
         super.viewDidLoad()
         setupUI()
         
-        let oauthUrl  = URL.init(string: OAuthRequestUrlString)
+        let oauthUrl  = URL.init(string: FH_RequestOAuthURLString)
         let oauthURLRequest = URLRequest.init(url: oauthUrl!)
         oauthWebView.loadRequest(oauthURLRequest)
         // Do any additional setup after loading the view.
+        
+       
     }
     
     
@@ -52,6 +58,7 @@ extension FHOAuthViewController
     
     func webView(_ webView: UIWebView, shouldStartLoadWith request: URLRequest, navigationType: UIWebViewNavigationType) -> Bool {
         
+        
         guard let url = request.url else {
             return true
         }
@@ -77,23 +84,39 @@ extension FHOAuthViewController
                           "redirect_uri":redirect_uri]
         
         
+        let headers: HTTPHeaders = [
+            "Accept": "text/plain"
+        ]
         
+        if time == 1{
+            
+            Alamofire.request("https://api.weibo.com/oauth2/access_token", method: .post, parameters: parameters, encoding: URLEncoding.default, headers: headers).responseJSON { (response) in
+               
+                guard let responseDict = response.result.value as? [String : AnyObject] else
+                {
+                    return
+                }
+                
+                //YYKit的方法
+                let userAccount = FHUserAccount.model(withJSON: responseDict)
+                
+                //Use NSKeyArchiver.archiveRootObject to archive an object
+                let savePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+                
+                let savedAccountPath = (savePath as NSString).appendingPathComponent("account.plist")
+                print(savedAccountPath)
+                
+                NSKeyedArchiver.archiveRootObject(userAccount!, toFile: savedAccountPath)
+                
+                
+                //Change RootViewController
         
-        GlobalSessionManager.fh_request(fh_methodType: .POST, URLString: Access_tokenURLString, parameters: parameters as [String : AnyObject]) { (result : [String : AnyObject]?, error :Error?) in
-            
-            if error != nil{
-                
-                print("THere is error\(error)")
-                return
+                UIApplication.shared.keyWindow?.rootViewController = UIStoryboard(name: "Main", bundle: nil).instantiateInitialViewController()
             }
+            time -= 1
             
-            if result != nil{
-                print("There are results\(result)")
-                return
-                
-            }
         }
-        
+      
 
         
         return true

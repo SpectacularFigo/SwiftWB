@@ -4,7 +4,7 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AFNetworking.xcscheme</key>
+		<key>Alamofire.xcscheme</key>
 		<dict>
 			<key>isShown</key>
 			<false/>
@@ -34,35 +34,45 @@
 			<key>isShown</key>
 			<false/>
 		</dict>
+		<key>YYKit.xcscheme</key>
+		<dict>
+			<key>isShown</key>
+			<false/>
+		</dict>
 	</dict>
 	<key>SuppressBuildableAutocreation</key>
 	<dict>
-		<key>0B49ED0FA1D336037451DCB3C48E7763</key>
+		<key>1F8D9D4FE8D03BED4C74F17157AA6103</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C11084536C67FE671131BD620190AE81</key>
+		<key>4D7FF8E87A649B1FF98CAFC62ED2871C</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>C4427683608B99F5ECB199D98C10C9CF</key>
+		<key>64A25C2A60CF71BEC8A98C6638D9E94B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CE2F3105F026DA3938A7F48883F991E3</key>
+		<key>66695EBCFDD46B907078CFE09B8C15CA</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>CF671F7E57B92905F1CC91D036D6B4A7</key>
+		<key>66B239826EF1D39D2D6C594AC2DBFF77</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E9B5E4B253872F60631D7EE151D4841A</key>
+		<key>749AB7724E838ADFD870D56852F7E983</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>A31E830C1F043E733C5665EBADBC3FB7</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -17,8 +17,6 @@ class FHDateTool: NSObject {
 //            let dateTimeString = "Tue Jan 31 10:22:29 +0800 2017"
         
         
-        
-        
         //NSDateformatter--->Use custom formatter to convert string to NSdate
         //1. Set DateFormate
         let dateFormatter = DateFormatter()
@@ -45,7 +43,7 @@ class FHDateTool: NSObject {
         
         // Tweet in one hour
         if timeIntervalFromNow < 60 * 60 {
-            return "This is \(timeIntervalFromNow/60/60) hours ago"
+            return "\((Int)(timeIntervalFromNow/60)) minutes ago"
         }
         
         //这下面用到了NSCalander   Tweet in yesterday
@@ -54,8 +52,6 @@ class FHDateTool: NSObject {
             dateFormatter.dateFormat="MM:dd HH:mm"
             return dateFormatter.string(from: createTime)
         }
-        
-        
         return "Tweeted long Time ago"
         
     }

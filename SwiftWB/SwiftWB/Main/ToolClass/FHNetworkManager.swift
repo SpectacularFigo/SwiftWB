@@ -7,7 +7,6 @@
 //
 
 import Alamofire
-
 enum FH_methodType
 {
     case GET, POST
@@ -24,12 +23,12 @@ extension FHNetworkManager{
     
     /// send request to retrieve the statues for the home page
     ///
-    /// - Parameters:
+    ///   - Parameters:
     ///   - parameter: the parameters asked by api
     ///   - fh_completionHandler: call back closure
-    func fh_requestStatuses(_ parameter : [String : String], fh_completionHandler : @escaping (_ JSON: [Any]?, _ fh_error : Error?)-> ()) -> Void {
-        
-        self.request("https://api.weibo.com/2/statuses/home_timeline.json", method: .get, parameters: parameter).responseJSON { (response) in
+    func fh_requestStatuses(_ parameter : [String : Any], fh_completionHandler : @escaping (_ JSON: [Any]?, _ fh_error : Error?)-> ()) -> Void {
+    
+        self.request(FH_RequestStatusURLString, method: .get, parameters: parameter).responseJSON { (response) in
             
             if let JSON = response.result.value as? [String : Any]{
                 

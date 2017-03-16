@@ -11,7 +11,22 @@ import UIKit
 class FHBaseTableViewController: UITableViewController {
     
     // MARK:- LazyLoading
-    var isLogin = false
+    var isLogin : Bool
+        {
+            
+     var savePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
+    
+     savePath = (savePath as NSString).appendingPathComponent("account.plist")
+        
+        let account = NSKeyedUnarchiver.unarchiveObject(withFile: savePath) as? FHUserAccount
+        
+        if account==nil {
+            return false
+        } else {
+            return true
+        }
+    
+    }
     fileprivate lazy var vistorView = FHVisitorView.visitorView()
     
     
@@ -48,11 +63,11 @@ extension FHBaseTableViewController
 extension FHBaseTableViewController
 {
     
-    
     @objc fileprivate func registerNavigationItemClick(){
         
         print("Register")
     }
+    
     
     @objc fileprivate func loginNavigationBarItemCick(){
         let navigationController = UINavigationController()

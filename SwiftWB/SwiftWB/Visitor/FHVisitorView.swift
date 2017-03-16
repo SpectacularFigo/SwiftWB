@@ -10,9 +10,6 @@ import UIKit
 
 class FHVisitorView: UIView {
 
-    
-
-    
     class func visitorView() -> FHVisitorView {
         return Bundle.main.loadNibNamed("visitorView", owner: nil, options: nil)!.first as! FHVisitorView
     }
@@ -23,10 +20,6 @@ class FHVisitorView: UIView {
     
     @IBAction func loginButtonClick(_ sender: UIButton) {
          print("login")
-        
     }
- 
-    
-
 
 }
