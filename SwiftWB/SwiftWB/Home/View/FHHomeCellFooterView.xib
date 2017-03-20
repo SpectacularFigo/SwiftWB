@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="U18-CK-Ns5" customClass="FHHomeCellFooterView" customModule="SwiftWB" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="483" height="44"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading more Tweets" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BCI-wi-KO9">
+                    <rect key="frame" x="0.0" y="0.0" width="483" height="44"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="33"/>
+                    <nil key="textColor"/>
+                    <nil key="highlightedColor"/>
+                </label>
+            </subviews>
+            <color key="backgroundColor" red="1" green="0.51066851619999998" blue="0.0019752138759999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="BCI-wi-KO9" firstAttribute="top" secondItem="U18-CK-Ns5" secondAttribute="top" id="ORT-jR-LJd"/>
+                <constraint firstItem="BCI-wi-KO9" firstAttribute="leading" secondItem="U18-CK-Ns5" secondAttribute="leading" id="XKn-Jq-plZ"/>
+                <constraint firstAttribute="trailing" secondItem="BCI-wi-KO9" secondAttribute="trailing" id="gDy-ZH-UzR"/>
+                <constraint firstAttribute="bottom" secondItem="BCI-wi-KO9" secondAttribute="bottom" id="xF9-us-cRt"/>
+            </constraints>
+            <nil key="simulatedStatusBarMetrics"/>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="89" y="-301"/>
+        </view>
+    </objects>
+</document>

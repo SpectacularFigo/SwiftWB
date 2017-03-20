@@ -21,7 +21,10 @@
 		28969B981E4F6C1A00C1165F /* FHVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28969B961E4F6C1A00C1165F /* FHVisitorView.swift */; };
 		28969B991E4F6C1A00C1165F /* visitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28969B971E4F6C1A00C1165F /* visitorView.xib */; };
 		28969BDD1E51073800C1165F /* FHUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28969BDC1E51073800C1165F /* FHUserAccount.swift */; };
+		28AC43551E7A200900AA8830 /* FHHomeCellFooterView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AC43541E7A200900AA8830 /* FHHomeCellFooterView.swift */; };
+		28AC43571E7A214D00AA8830 /* FHHomeCellFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AC43561E7A214D00AA8830 /* FHHomeCellFooterView.xib */; };
 		28AE86AF1E5B847900384A93 /* FHDateTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AE86AE1E5B847900384A93 /* FHDateTool.swift */; };
+		28B56D5C1E7A369800DCEE16 /* FHAccountTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B56D5B1E7A369800DCEE16 /* FHAccountTool.swift */; };
 		28D441851E4A08AA0068AE43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D441841E4A08AA0068AE43 /* AppDelegate.swift */; };
 		28D4418A1E4A08AA0068AE43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D441881E4A08AA0068AE43 /* Main.storyboard */; };
 		28D4418F1E4A08AA0068AE43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D4418D1E4A08AA0068AE43 /* LaunchScreen.storyboard */; };
@@ -74,7 +77,10 @@
 		28969B961E4F6C1A00C1165F /* FHVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHVisitorView.swift; sourceTree = "<group>"; };
 		28969B971E4F6C1A00C1165F /* visitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = visitorView.xib; sourceTree = "<group>"; };
 		28969BDC1E51073800C1165F /* FHUserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHUserAccount.swift; sourceTree = "<group>"; };
+		28AC43541E7A200900AA8830 /* FHHomeCellFooterView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHHomeCellFooterView.swift; sourceTree = "<group>"; };
+		28AC43561E7A214D00AA8830 /* FHHomeCellFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FHHomeCellFooterView.xib; sourceTree = "<group>"; };
 		28AE86AE1E5B847900384A93 /* FHDateTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHDateTool.swift; sourceTree = "<group>"; };
+		28B56D5B1E7A369800DCEE16 /* FHAccountTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHAccountTool.swift; sourceTree = "<group>"; };
 		28D441811E4A08AA0068AE43 /* SwiftWB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftWB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28D441841E4A08AA0068AE43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		28D441891E4A08AA0068AE43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -188,6 +194,7 @@
 				281B6D991E4A62EE0021990A /* UIBarButtonItem-Extension.swift */,
 				280C30541E562E78001AC165 /* FHNetworkManager.swift */,
 				28AE86AE1E5B847900384A93 /* FHDateTool.swift */,
+				28B56D5B1E7A369800DCEE16 /* FHAccountTool.swift */,
 			);
 			name = Tool;
 			path = Main/ToolClass;
@@ -293,6 +300,8 @@
 			children = (
 				28E5ABD61E6E5F05002F0AEF /* FHHomeCell.swift */,
 				28285D8A1E70F62600835B0B /* FHHomeCollectionCell.swift */,
+				28AC43541E7A200900AA8830 /* FHHomeCellFooterView.swift */,
+				28AC43561E7A214D00AA8830 /* FHHomeCellFooterView.xib */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -497,7 +506,7 @@
 				TargetAttributes = {
 					28D441801E4A08AA0068AE43 = {
 						CreatedOnToolsVersion = 8.2.1;
-						DevelopmentTeam = AK75VWB3R8;
+						DevelopmentTeam = Y48AW9LBLR;
 						LastSwiftMigration = 0820;
 						ProvisioningStyle = Automatic;
 					};
@@ -547,6 +556,7 @@
 				28D4418A1E4A08AA0068AE43 /* Main.storyboard in Resources */,
 				28969B991E4F6C1A00C1165F /* visitorView.xib in Resources */,
 				2847885D1E4CBE75004653D1 /* FHOAuthViewController.xib in Resources */,
+				28AC43571E7A214D00AA8830 /* FHHomeCellFooterView.xib in Resources */,
 				28D441DA1E4A123A0068AE43 /* Me.storyboard in Resources */,
 				281B6D9C1E4A66DB0021990A /* Assets.xcassets in Resources */,
 				28D441CD1E4A117C0068AE43 /* Home.storyboard in Resources */,
@@ -719,6 +729,7 @@
 				280C30551E562E78001AC165 /* FHNetworkManager.swift in Sources */,
 				28969B981E4F6C1A00C1165F /* FHVisitorView.swift in Sources */,
 				28FBAE0C1E6E2F9300E651E7 /* FHStatusViewModel.swift in Sources */,
+				28AC43551E7A200900AA8830 /* FHHomeCellFooterView.swift in Sources */,
 				2847885C1E4CBE75004653D1 /* FHOAuthViewController.swift in Sources */,
 				28285D8B1E70F62600835B0B /* FHHomeCollectionCell.swift in Sources */,
 				281B6D9A1E4A62EE0021990A /* UIBarButtonItem-Extension.swift in Sources */,
@@ -726,6 +737,7 @@
 				281B6D591E4A2DC60021990A /* FHHomeTableViewController.swift in Sources */,
 				28219B2B1E4A7A5A00BF7F32 /* FHTitleButton.swift in Sources */,
 				281B6D571E4A2D7E0021990A /* FHBaseTableViewController.swift in Sources */,
+				28B56D5C1E7A369800DCEE16 /* FHAccountTool.swift in Sources */,
 				28D441851E4A08AA0068AE43 /* AppDelegate.swift in Sources */,
 				2847885F1E4CC04C004653D1 /* Constants.swift in Sources */,
 			);
@@ -875,14 +887,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = AK75VWB3R8;
+				DEVELOPMENT_TEAM = Y48AW9LBLR;
 				INFOPLIST_FILE = SwiftWB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.FigoHan.SwiftWB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FigoHan.SwiftWB1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = "Debug copy";
 		};
@@ -1014,14 +1027,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = AK75VWB3R8;
+				DEVELOPMENT_TEAM = Y48AW9LBLR;
 				INFOPLIST_FILE = SwiftWB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.FigoHan.SwiftWB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FigoHan.SwiftWB1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Debug;
 		};
@@ -1031,13 +1045,14 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
 				CLANG_ENABLE_MODULES = YES;
-				DEVELOPMENT_TEAM = AK75VWB3R8;
+				DEVELOPMENT_TEAM = Y48AW9LBLR;
 				INFOPLIST_FILE = SwiftWB/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = com.FigoHan.SwiftWB;
+				PRODUCT_BUNDLE_IDENTIFIER = com.FigoHan.SwiftWB1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};

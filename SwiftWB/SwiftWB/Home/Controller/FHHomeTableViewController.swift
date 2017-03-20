@@ -29,9 +29,8 @@ class FHHomeTableViewController: FHBaseTableViewController {
         if !isLogin {
             return
         }
-        
+        setupFooterView()
         setupNavigationItem()
-        
         setupRefreshControl()
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 200
@@ -50,6 +49,16 @@ class FHHomeTableViewController: FHBaseTableViewController {
 // MARK:- UI Structure Setting
 extension FHHomeTableViewController
 {
+    
+    fileprivate func setupFooterView()
+    {
+        
+        let footerView = FHHomeCellFooterView.footerView()
+        self.tableView.tableFooterView = footerView
+        self.tableView.tableFooterView?.isHidden = true
+        
+    }
+    
     fileprivate func setupNavigationItem()
     {
         
@@ -74,29 +83,11 @@ extension FHHomeTableViewController
         self.refreshControl?.beginRefreshing()
         
         // NOTICE : beginingRefreshing will not make UIControl state become valueChange so that func requestNeworMoreStatus will never be called. This is why I should call requestStatues() function, because it may cause some values changing, as a result event valueChanged is created.
-       
-        
         requestStatuses()
-        
-        
+    
     }
     
-    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
-        return self.statusViewModelArray.count
-    }
-    
-    
-    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        
-    
-        let cell = tableView.dequeueReusableCell(withIdentifier: "identifier") as! FHHomeCell
-        
-        cell.statusViewModel = self.statusViewModelArray[indexPath.row]
-        
-        return cell
-        
-    }
+
     
 }
 
@@ -116,24 +107,57 @@ extension FHHomeTableViewController
         print("requestNeworMoreStatus")
          requestStatuses()
     }
-    
-    func requestStatuses() -> Void {
+    func loadMoreTweets() -> Void {
+//       FHNetworkManager.sharedNetworkManager.fh_requestStatuses(<#T##parameter: [String : Any]##[String : Any]#>, fh_completionHandler: <#T##([Any]?, Error?) -> ()#>)
         
-        let searchPath = (NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first! as NSString).appendingPathComponent("account.plist")
+        let access_token = FHAccountTool.accessToken()
         
-        let userAccount = NSKeyedUnarchiver.unarchiveObject(withFile: searchPath) as? FHUserAccount
-        
-        
-        guard let userAccountTemp = userAccount else {
-            print("There is no userAccount")
-            return
-        }
-        
-        guard let accessTokenTemp = userAccountTemp.access_token else {
+        guard let accessTokenTemp = access_token else {
             print("There is not an access_token")
             return
         }
         
+        var max_id = "0"
+        
+        if !self.statusViewModelArray.isEmpty {
+            max_id = (self.statusViewModelArray.last?.status?.idstr)!
+        }
+        
+        
+        let parameter = ["access_token" : accessTokenTemp , "since_id": max_id] as [String : Any]
+        
+        FHNetworkManager.sharedNetworkManager.fh_requestStatuses(parameter) { (fh_JSONStatuses, fh_error) in
+            
+            guard let JSONStatues = fh_JSONStatuses else{
+                
+                print("There is an error in the request")
+                return
+            }
+            
+           
+            
+            for i in 0..<JSONStatues.count
+            {
+                
+                let statusTemp = JSONStatues[i] as! [String : AnyObject]
+                let status = FHStatues.init(dict: statusTemp)
+                let statusViewModel = FHStatusViewModel.init(status: status)
+                self.statusViewModelArray.append(statusViewModel)
+            }
+            self.tableView.reloadData()
+            self.tableView.tableFooterView?.isHidden = true
+        }
+        
+    }
+    
+    func requestStatuses() -> Void {
+        
+        let access_token = FHAccountTool.accessToken()
+        
+        guard let accessTokenTemp = access_token else {
+             print("There is not an access_token")
+             return
+        }
         
         var since_id = "0"
         
@@ -169,9 +193,52 @@ extension FHHomeTableViewController
         self.refreshControl?.endRefreshing()
         }
     
-    
-    
 }
 
 }
 
+        
+        
+// MARK:- Delegate and Datasource Methods
+extension FHHomeTableViewController
+        {
+    
+    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        if self.statusViewModelArray.count == 0 {
+            return
+        }
+        
+        let offsetY = scrollView.contentOffset.y
+        
+        let judgeOffsetY = scrollView.contentSize.height + scrollView.contentInset.bottom - scrollView.height - (self.tableView.tableFooterView?.height)!;
+        
+        if (offsetY >= judgeOffsetY) { // 最后一个cell完全进入视野范围内
+            // 显示footer
+            tableView.tableFooterView?.isHidden = false
+            
+            // 加载更多的微博数据
+            loadMoreTweets()
+        }
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        
+        return self.statusViewModelArray.count
+    }
+    
+    
+    override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        
+        
+        let cell = tableView.dequeueReusableCell(withIdentifier: "identifier") as! FHHomeCell
+        
+        cell.statusViewModel = self.statusViewModelArray[indexPath.row]
+        
+        return cell
+        
+    }
+        }
+        
+        
