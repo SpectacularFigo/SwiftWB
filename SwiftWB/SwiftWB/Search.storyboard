@@ -12,7 +12,7 @@
         <!--Search-->
         <scene sceneID="ldx-ec-7Qe">
             <objects>
-                <tableViewController id="wfC-FX-Nl8" customClass="FHDiscoverTableViewController" customModule="SwiftWB" customModuleProvider="target" sceneMemberID="viewController">
+                <tableViewController id="wfC-FX-Nl8" customClass="FHSearchTableViewController" customModule="SwiftWB" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="6zU-Zs-bBw">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>

@@ -8,19 +8,23 @@
 
 import UIKit
 import Alamofire
+import MJRefresh
 
 class FHHomeTableViewController: FHBaseTableViewController {
     
     // MARK:- LazyLoading
     fileprivate lazy var statusViewModelArray = [FHStatusViewModel]()
-    
-    //这个地方就不能用private，因为extension获取不到
-    fileprivate lazy var titlButton :FHTitleButton =      // 懒加载必须注明类型
+    fileprivate lazy var titlButton :FHTitleButton =      // 懒加载必须注明类型   //这个地方就不能用private，因为extension获取不到  This is a computing property
         {
             var titleButton = FHTitleButton()
             titleButton.addTarget(self, action:#selector(titleButtonClick(titleButton:)), for: .touchUpInside)
             return titleButton
-    }()
+        }()
+    
+    
+    
+    
+    
     
     
     // MARK:- Others
@@ -29,13 +33,11 @@ class FHHomeTableViewController: FHBaseTableViewController {
         if !isLogin {
             return
         }
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 200
         setupFooterView()
         setupNavigationItem()
         setupRefreshControl()
-        tableView.rowHeight = UITableViewAutomaticDimension
-        tableView.estimatedRowHeight = 200
-     
-        
     }
     deinit {
         print("deinit")
@@ -50,14 +52,6 @@ class FHHomeTableViewController: FHBaseTableViewController {
 extension FHHomeTableViewController
 {
     
-    fileprivate func setupFooterView()
-    {
-        
-        let footerView = FHHomeCellFooterView.footerView()
-        self.tableView.tableFooterView = footerView
-        self.tableView.tableFooterView?.isHidden = true
-        
-    }
     
     fileprivate func setupNavigationItem()
     {
@@ -72,21 +66,32 @@ extension FHHomeTableViewController
         //        self.navigationItem.leftBarButtonItem=UIBarButtonItem.init(customView: leftBtn)
         //
         navigationItem.leftBarButtonItem=UIBarButtonItem(imageName: "navigationbar_friendattention")
-        navigationItem.rightBarButtonItem=UIBarButtonItem(imageName: "navigationbar_pop")
+        navigationItem.rightBarButtonItem=UIBarButtonItem(barButtonSystemItem: .compose, target: self, action: #selector(composeTweet))
+    
+    
         
     }
     
     fileprivate func setupRefreshControl() -> Void
     {
         self.refreshControl = UIRefreshControl(frame: CGRect(x: 0, y: 0, width: screenWidth, height: 44))
-        self.refreshControl?.addTarget(self, action: #selector(requestNeworMoreStatus), for: .valueChanged)
+        self.refreshControl?.addTarget(self, action: #selector(requestMoreNewTweets), for: .valueChanged)
         self.refreshControl?.beginRefreshing()
         
-        // NOTICE : beginingRefreshing will not make UIControl state become valueChange so that func requestNeworMoreStatus will never be called. This is why I should call requestStatues() function, because it may cause some values changing, as a result event valueChanged is created.
-        requestStatuses()
+        // NOTICE : beginingRefreshing will not make UIControl state become valueChange so that func requestMoreNewTweets will never be called. This is why I should call requestStatues() function, because it may cause some values changing, as a result event valueChanged is created.
+        requestStatuses(fetchNewData: true)
     
     }
     
+    
+    fileprivate func setupFooterView()
+    {
+        let footerView = FHHomeCellFooterView.footerView()
+        self.tableView.tableFooterView = footerView
+        self.tableView.tableFooterView?.isHidden = true
+        self.tableView.mj_footer = MJRefreshAutoNormalFooter(refreshingTarget: self, refreshingAction: #selector(requestMoreOldTweets))
+    }
+
 
     
 }
@@ -102,55 +107,37 @@ extension FHHomeTableViewController
         titleButton.isSelected = !titleButton.isSelected // Default is NO
     }
     
-    @objc fileprivate func requestNeworMoreStatus() -> Void
+    
+    
+    @objc fileprivate func requestMoreNewTweets() -> Void
     {
-        print("requestNeworMoreStatus")
-         requestStatuses()
+        print("requestMoreNewTweets")
+        requestStatuses(fetchNewData: true)
     }
-    func loadMoreTweets() -> Void {
-//       FHNetworkManager.sharedNetworkManager.fh_requestStatuses(<#T##parameter: [String : Any]##[String : Any]#>, fh_completionHandler: <#T##([Any]?, Error?) -> ()#>)
+    
+    
+    @objc fileprivate func requestMoreOldTweets() ->Void{
         
-        let access_token = FHAccountTool.accessToken()
-        
-        guard let accessTokenTemp = access_token else {
-            print("There is not an access_token")
-            return
-        }
-        
-        var max_id = "0"
-        
-        if !self.statusViewModelArray.isEmpty {
-            max_id = (self.statusViewModelArray.last?.status?.idstr)!
-        }
-        
-        
-        let parameter = ["access_token" : accessTokenTemp , "since_id": max_id] as [String : Any]
-        
-        FHNetworkManager.sharedNetworkManager.fh_requestStatuses(parameter) { (fh_JSONStatuses, fh_error) in
-            
-            guard let JSONStatues = fh_JSONStatuses else{
-                
-                print("There is an error in the request")
-                return
-            }
-            
-           
-            
-            for i in 0..<JSONStatues.count
-            {
-                
-                let statusTemp = JSONStatues[i] as! [String : AnyObject]
-                let status = FHStatues.init(dict: statusTemp)
-                let statusViewModel = FHStatusViewModel.init(status: status)
-                self.statusViewModelArray.append(statusViewModel)
-            }
-            self.tableView.reloadData()
-            self.tableView.tableFooterView?.isHidden = true
-        }
+        print("requestMoreOldTweets")
+        requestStatuses(fetchNewData: false)
         
     }
     
-    func requestStatuses() -> Void {
+    
+    
+    @objc fileprivate func composeTweet() ->Void
+    {
+        
+        let composeNavigationCon = UINavigationController(rootViewController: FHComposeViewController())
+//        composeNavigationCon.modalPresentationStyle = .pageSheet
+//        composeNavigationCon.modalTransitionStyle = .partialCurl
+        self.present(composeNavigationCon, animated: true) {}
+        
+    }
+    
+    
+    
+     func requestStatuses(fetchNewData: Bool) -> Void {
         
         let access_token = FHAccountTool.accessToken()
         
@@ -159,14 +146,26 @@ extension FHHomeTableViewController
              return
         }
         
+        // check if fetech new Tweets
+        var parameter = [String : Any]()
         var since_id = "0"
+        var max_id = "0"
+        
         
         if !self.statusViewModelArray.isEmpty {
             since_id = (self.statusViewModelArray[0].status?.idstr)!
+            max_id = (self.statusViewModelArray.last?.status?.idstr)!
         }
-
+        if fetchNewData {
+            
+            parameter = ["access_token" : accessTokenTemp , "since_id": since_id]
+        }else{
+            
+            parameter = ["access_token" : accessTokenTemp , "max_id": max_id]
+            
+        }
         
-        let parameter = ["access_token" : accessTokenTemp , "since_id": since_id] as [String : Any]
+       
         
         FHNetworkManager.sharedNetworkManager.fh_requestStatuses(parameter) { (fh_JSONStatuses, fh_error) in
         
@@ -191,36 +190,17 @@ extension FHHomeTableViewController
             
         self.tableView.reloadData()
         self.refreshControl?.endRefreshing()
+        self.tableView.mj_footer.endRefreshing()
         }
-    
 }
 
 }
 
         
-        
+// MARK:- NOTE: cellforHeight 我没用那个， 回头看看
 // MARK:- Delegate and Datasource Methods
 extension FHHomeTableViewController
         {
-    
-    override func scrollViewDidScroll(_ scrollView: UIScrollView) {
-        
-        if self.statusViewModelArray.count == 0 {
-            return
-        }
-        
-        let offsetY = scrollView.contentOffset.y
-        
-        let judgeOffsetY = scrollView.contentSize.height + scrollView.contentInset.bottom - scrollView.height - (self.tableView.tableFooterView?.height)!;
-        
-        if (offsetY >= judgeOffsetY) { // 最后一个cell完全进入视野范围内
-            // 显示footer
-            tableView.tableFooterView?.isHidden = false
-            
-            // 加载更多的微博数据
-            loadMoreTweets()
-        }
-    }
     
     
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {

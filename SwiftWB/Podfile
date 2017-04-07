@@ -9,6 +9,10 @@ pod ‘SDWebImage’
 pod ‘SVProgressHUD’
 pod 'Alamofire'
 pod ‘YYKit’
+pod ‘MJRefresh’
+pod 'SnapKit', '~> 3.2.0'
+pod 'Fabric'
+pod 'Branch'
   # Pods for SwiftWB
 
   target 'SwiftWBTests' do

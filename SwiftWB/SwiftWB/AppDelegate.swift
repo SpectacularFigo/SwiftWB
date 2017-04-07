@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Fabric
+import Branch
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -21,6 +23,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         UITabBar.appearance().tintColor=UIColor.orange
         UINavigationBar.appearance().tintColor=UIColor.orange
         
+        Fabric.with([Branch.self])
         return true
     }
 
@@ -46,6 +49,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
     }
 
-
+    
+    func application(_ application: UIApplication, open url: URL, sourceApplication: String?, annotation: Any) -> Bool {
+        if url.host! == "page" {
+            if url.path == "main" {
+                self.window?.rootViewController?.present(FHProfileTableViewController(), animated: true, completion: { 
+                    
+                })
+                
+            }
+        }
+        return true
+    }
 }
 

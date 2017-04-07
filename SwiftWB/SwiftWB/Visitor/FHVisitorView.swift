@@ -10,6 +10,8 @@ import UIKit
 
 class FHVisitorView: UIView {
 
+    
+    fileprivate lazy var array = [Int]()
     class func visitorView() -> FHVisitorView {
         return Bundle.main.loadNibNamed("visitorView", owner: nil, options: nil)!.first as! FHVisitorView
     }
@@ -22,4 +24,6 @@ class FHVisitorView: UIView {
          print("login")
     }
 
+    
+    
 }

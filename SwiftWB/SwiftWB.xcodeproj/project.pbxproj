@@ -25,6 +25,11 @@
 		28AC43571E7A214D00AA8830 /* FHHomeCellFooterView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28AC43561E7A214D00AA8830 /* FHHomeCellFooterView.xib */; };
 		28AE86AF1E5B847900384A93 /* FHDateTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28AE86AE1E5B847900384A93 /* FHDateTool.swift */; };
 		28B56D5C1E7A369800DCEE16 /* FHAccountTool.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28B56D5B1E7A369800DCEE16 /* FHAccountTool.swift */; };
+		28D1A0F61E8456C400035F55 /* FHSearchTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D1A0F51E8456C400035F55 /* FHSearchTableViewController.swift */; };
+		28D1A0F81E84572400035F55 /* FHMessageTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D1A0F71E84572400035F55 /* FHMessageTableViewController.swift */; };
+		28D1A0FA1E84573F00035F55 /* FHProfileTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D1A0F91E84573F00035F55 /* FHProfileTableViewController.swift */; };
+		28D1A1431E8465C100035F55 /* FHComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D1A1411E8465C100035F55 /* FHComposeViewController.swift */; };
+		28D1A1441E8465C100035F55 /* FHComposeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28D1A1421E8465C100035F55 /* FHComposeViewController.xib */; };
 		28D441851E4A08AA0068AE43 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D441841E4A08AA0068AE43 /* AppDelegate.swift */; };
 		28D4418A1E4A08AA0068AE43 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D441881E4A08AA0068AE43 /* Main.storyboard */; };
 		28D4418F1E4A08AA0068AE43 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D4418D1E4A08AA0068AE43 /* LaunchScreen.storyboard */; };
@@ -32,7 +37,6 @@
 		28D441A51E4A08AA0068AE43 /* SwiftWBUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28D441A41E4A08AA0068AE43 /* SwiftWBUITests.swift */; };
 		28D441CD1E4A117C0068AE43 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D441CB1E4A117C0068AE43 /* Home.storyboard */; };
 		28D441D21E4A11C10068AE43 /* Message.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D441D01E4A11C10068AE43 /* Message.storyboard */; };
-		28D441D51E4A11F10068AE43 /* Compose.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D441D31E4A11F10068AE43 /* Compose.storyboard */; };
 		28D441D71E4A121A0068AE43 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D441D61E4A121A0068AE43 /* Search.storyboard */; };
 		28D441DA1E4A123A0068AE43 /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D441D81E4A123A0068AE43 /* Me.storyboard */; };
 		28E5ABD71E6E5F05002F0AEF /* FHHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5ABD61E6E5F05002F0AEF /* FHHomeCell.swift */; };
@@ -81,6 +85,11 @@
 		28AC43561E7A214D00AA8830 /* FHHomeCellFooterView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FHHomeCellFooterView.xib; sourceTree = "<group>"; };
 		28AE86AE1E5B847900384A93 /* FHDateTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHDateTool.swift; sourceTree = "<group>"; };
 		28B56D5B1E7A369800DCEE16 /* FHAccountTool.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHAccountTool.swift; sourceTree = "<group>"; };
+		28D1A0F51E8456C400035F55 /* FHSearchTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FHSearchTableViewController.swift; path = SwiftWB/Search/FHSearchTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		28D1A0F71E84572400035F55 /* FHMessageTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FHMessageTableViewController.swift; path = SwiftWB/Search/FHMessageTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		28D1A0F91E84573F00035F55 /* FHProfileTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = FHProfileTableViewController.swift; path = SwiftWB/Search/FHProfileTableViewController.swift; sourceTree = SOURCE_ROOT; };
+		28D1A1411E8465C100035F55 /* FHComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHComposeViewController.swift; sourceTree = "<group>"; };
+		28D1A1421E8465C100035F55 /* FHComposeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FHComposeViewController.xib; sourceTree = "<group>"; };
 		28D441811E4A08AA0068AE43 /* SwiftWB.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SwiftWB.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		28D441841E4A08AA0068AE43 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = ../AppDelegate.swift; sourceTree = "<group>"; };
 		28D441891E4A08AA0068AE43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -94,7 +103,6 @@
 		28D441A61E4A08AA0068AE43 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		28D441CC1E4A117C0068AE43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Home.storyboard; sourceTree = "<group>"; };
 		28D441D11E4A11C10068AE43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Message.storyboard; sourceTree = "<group>"; };
-		28D441D41E4A11F10068AE43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Compose.storyboard; sourceTree = "<group>"; };
 		28D441D61E4A121A0068AE43 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Search.storyboard; path = SwiftWB/Search.storyboard; sourceTree = SOURCE_ROOT; };
 		28D441D91E4A123A0068AE43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Me.storyboard; sourceTree = "<group>"; };
 		28E5ABD61E6E5F05002F0AEF /* FHHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHHomeCell.swift; sourceTree = "<group>"; };
@@ -179,7 +187,6 @@
 			children = (
 				28D441841E4A08AA0068AE43 /* AppDelegate.swift */,
 				28D4418D1E4A08AA0068AE43 /* LaunchScreen.storyboard */,
-				28D441D31E4A11F10068AE43 /* Compose.storyboard */,
 				28D441881E4A08AA0068AE43 /* Main.storyboard */,
 				281B6D561E4A2D7E0021990A /* FHBaseTableViewController.swift */,
 			);
@@ -209,6 +216,31 @@
 			path = Visitor;
 			sourceTree = "<group>";
 		};
+		28D1A0FC1E845F3B00035F55 /* Compose */ = {
+			isa = PBXGroup;
+			children = (
+				28D1A0FD1E845F3B00035F55 /* Controller */,
+				28D1A0FE1E845F3B00035F55 /* View */,
+			);
+			path = Compose;
+			sourceTree = "<group>";
+		};
+		28D1A0FD1E845F3B00035F55 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				28D1A1411E8465C100035F55 /* FHComposeViewController.swift */,
+				28D1A1421E8465C100035F55 /* FHComposeViewController.xib */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		28D1A0FE1E845F3B00035F55 /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
 		28D441781E4A08AA0068AE43 = {
 			isa = PBXGroup;
 			children = (
@@ -235,10 +267,10 @@
 			isa = PBXGroup;
 			children = (
 				28219B271E4A7A1300BF7F32 /* Tool */,
-				28D441B21E4A0BB90068AE43 /* Home */,
 				281B6D551E4A2D6E0021990A /* Main */,
 				28969B951E4F6C1A00C1165F /* Visitor */,
 				28054AD81E4C166800EB2AF8 /* OAuth */,
+				28D441B21E4A0BB90068AE43 /* Home */,
 				28D441BA1E4A0BB90068AE43 /* Message */,
 				28D441BE1E4A0BB90068AE43 /* Search */,
 				28D441B61E4A0BB90068AE43 /* Me */,
@@ -269,6 +301,7 @@
 		28D441B21E4A0BB90068AE43 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				28D1A0FC1E845F3B00035F55 /* Compose */,
 				28D441B31E4A0BB90068AE43 /* Controller */,
 				28D441B41E4A0BB90068AE43 /* Model */,
 				28D441B51E4A0BB90068AE43 /* View */,
@@ -279,8 +312,8 @@
 		28D441B31E4A0BB90068AE43 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				28D441CB1E4A117C0068AE43 /* Home.storyboard */,
 				281B6D581E4A2DC60021990A /* FHHomeTableViewController.swift */,
+				28D441CB1E4A117C0068AE43 /* Home.storyboard */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -320,6 +353,7 @@
 		28D441B71E4A0BB90068AE43 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				28D1A0F91E84573F00035F55 /* FHProfileTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -352,6 +386,7 @@
 		28D441BB1E4A0BB90068AE43 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				28D1A0F71E84572400035F55 /* FHMessageTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -384,6 +419,7 @@
 		28D441BF1E4A0BB90068AE43 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				28D1A0F51E8456C400035F55 /* FHSearchTableViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -441,6 +477,7 @@
 				28D4417F1E4A08AA0068AE43 /* Resources */,
 				6E9FC0774A7DE3371C60676C /* [CP] Embed Pods Frameworks */,
 				B2B8BFDE25CF334342D861EB /* [CP] Copy Pods Resources */,
+				283D79FA1E9813AB006B47D4 /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -550,7 +587,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				28D4418F1E4A08AA0068AE43 /* LaunchScreen.storyboard in Resources */,
-				28D441D51E4A11F10068AE43 /* Compose.storyboard in Resources */,
 				28D441D21E4A11C10068AE43 /* Message.storyboard in Resources */,
 				28D441D71E4A121A0068AE43 /* Search.storyboard in Resources */,
 				28D4418A1E4A08AA0068AE43 /* Main.storyboard in Resources */,
@@ -558,6 +594,7 @@
 				2847885D1E4CBE75004653D1 /* FHOAuthViewController.xib in Resources */,
 				28AC43571E7A214D00AA8830 /* FHHomeCellFooterView.xib in Resources */,
 				28D441DA1E4A123A0068AE43 /* Me.storyboard in Resources */,
+				28D1A1441E8465C100035F55 /* FHComposeViewController.xib in Resources */,
 				281B6D9C1E4A66DB0021990A /* Assets.xcassets in Resources */,
 				28D441CD1E4A117C0068AE43 /* Home.storyboard in Resources */,
 			);
@@ -580,6 +617,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		283D79FA1E9813AB006B47D4 /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Fabric/run\" d72852d640d85ee957e2f7817dcb09e326acccd6 b968f6daa4245c723498a77a0b2a100e240b088dee341ebfc56b9ba555ffd5b9";
+		};
 		39D312E7AA3A56793ADA18C2 /* [CP] Check Pods Manifest.lock */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -737,6 +787,10 @@
 				281B6D591E4A2DC60021990A /* FHHomeTableViewController.swift in Sources */,
 				28219B2B1E4A7A5A00BF7F32 /* FHTitleButton.swift in Sources */,
 				281B6D571E4A2D7E0021990A /* FHBaseTableViewController.swift in Sources */,
+				28D1A0FA1E84573F00035F55 /* FHProfileTableViewController.swift in Sources */,
+				28D1A0F81E84572400035F55 /* FHMessageTableViewController.swift in Sources */,
+				28D1A1431E8465C100035F55 /* FHComposeViewController.swift in Sources */,
+				28D1A0F61E8456C400035F55 /* FHSearchTableViewController.swift in Sources */,
 				28B56D5C1E7A369800DCEE16 /* FHAccountTool.swift in Sources */,
 				28D441851E4A08AA0068AE43 /* AppDelegate.swift in Sources */,
 				2847885F1E4CC04C004653D1 /* Constants.swift in Sources */,
@@ -811,15 +865,6 @@
 			path = ..;
 			sourceTree = "<group>";
 		};
-		28D441D31E4A11F10068AE43 /* Compose.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				28D441D41E4A11F10068AE43 /* Base */,
-			);
-			name = Compose.storyboard;
-			path = ..;
-			sourceTree = "<group>";
-		};
 		28D441D81E4A123A0068AE43 /* Me.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -886,6 +931,7 @@
 			baseConfigurationReference = CE5DB20666CB46005544EFA4 /* Pods-SwiftWB.debug copy.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Y48AW9LBLR;
 				INFOPLIST_FILE = SwiftWB/Info.plist;
@@ -1026,6 +1072,7 @@
 			baseConfigurationReference = 20BEE375118930B187016488 /* Pods-SwiftWB.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Y48AW9LBLR;
 				INFOPLIST_FILE = SwiftWB/Info.plist;
@@ -1044,6 +1091,7 @@
 			baseConfigurationReference = FC939AFAD732B54D238920EE /* Pods-SwiftWB.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = "AppIcon-1";
+				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Y48AW9LBLR;
 				INFOPLIST_FILE = SwiftWB/Info.plist;
