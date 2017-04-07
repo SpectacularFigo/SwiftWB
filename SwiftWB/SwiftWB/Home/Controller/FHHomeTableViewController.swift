@@ -191,6 +191,7 @@ extension FHHomeTableViewController
             
         self.tableView.reloadData()
         self.refreshControl?.endRefreshing()
+        print("HHHHH")
         }
     
 }
