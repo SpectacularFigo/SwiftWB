@@ -18,6 +18,7 @@
 		2847885C1E4CBE75004653D1 /* FHOAuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2847885A1E4CBE75004653D1 /* FHOAuthViewController.swift */; };
 		2847885D1E4CBE75004653D1 /* FHOAuthViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 2847885B1E4CBE75004653D1 /* FHOAuthViewController.xib */; };
 		2847885F1E4CC04C004653D1 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2847885E1E4CC04C004653D1 /* Constants.swift */; };
+		28517D001EF6A68F00E922A9 /* FHModelss.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28517CFF1EF6A68F00E922A9 /* FHModelss.swift */; };
 		28969B981E4F6C1A00C1165F /* FHVisitorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28969B961E4F6C1A00C1165F /* FHVisitorView.swift */; };
 		28969B991E4F6C1A00C1165F /* visitorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 28969B971E4F6C1A00C1165F /* visitorView.xib */; };
 		28969BDD1E51073800C1165F /* FHUserAccount.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28969BDC1E51073800C1165F /* FHUserAccount.swift */; };
@@ -74,6 +75,7 @@
 		2847885A1E4CBE75004653D1 /* FHOAuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHOAuthViewController.swift; sourceTree = "<group>"; };
 		2847885B1E4CBE75004653D1 /* FHOAuthViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = FHOAuthViewController.xib; sourceTree = "<group>"; };
 		2847885E1E4CC04C004653D1 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Constants.swift; path = ../Constants.swift; sourceTree = "<group>"; };
+		28517CFF1EF6A68F00E922A9 /* FHModelss.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHModelss.swift; sourceTree = "<group>"; };
 		28969B961E4F6C1A00C1165F /* FHVisitorView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHVisitorView.swift; sourceTree = "<group>"; };
 		28969B971E4F6C1A00C1165F /* visitorView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = visitorView.xib; sourceTree = "<group>"; };
 		28969BDC1E51073800C1165F /* FHUserAccount.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHUserAccount.swift; sourceTree = "<group>"; };
@@ -244,6 +246,7 @@
 				28D441B61E4A0BB90068AE43 /* Me */,
 				28D441901E4A08AA0068AE43 /* Info.plist */,
 				281B6D9B1E4A66DB0021990A /* Assets.xcassets */,
+				28517CFF1EF6A68F00E922A9 /* FHModelss.swift */,
 			);
 			path = SwiftWB;
 			sourceTree = "<group>";
@@ -726,6 +729,7 @@
 				28AE86AF1E5B847900384A93 /* FHDateTool.swift in Sources */,
 				28FBAE0A1E6E282800E651E7 /* FHUser.swift in Sources */,
 				28969BDD1E51073800C1165F /* FHUserAccount.swift in Sources */,
+				28517D001EF6A68F00E922A9 /* FHModelss.swift in Sources */,
 				280C30551E562E78001AC165 /* FHNetworkManager.swift in Sources */,
 				28969B981E4F6C1A00C1165F /* FHVisitorView.swift in Sources */,
 				28FBAE0C1E6E2F9300E651E7 /* FHStatusViewModel.swift in Sources */,
