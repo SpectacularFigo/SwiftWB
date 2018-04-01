@@ -175,10 +175,10 @@
 		281B6D551E4A2D6E0021990A /* Main */ = {
 			isa = PBXGroup;
 			children = (
-				28D441841E4A08AA0068AE43 /* AppDelegate.swift */,
 				28D4418D1E4A08AA0068AE43 /* LaunchScreen.storyboard */,
 				28D441D31E4A11F10068AE43 /* Compose.storyboard */,
 				28D441881E4A08AA0068AE43 /* Main.storyboard */,
+				28D441841E4A08AA0068AE43 /* AppDelegate.swift */,
 				281B6D561E4A2D7E0021990A /* FHBaseTableViewController.swift */,
 			);
 			path = Main;
