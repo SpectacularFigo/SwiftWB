@@ -8,8 +8,7 @@
 
 import UIKit
 
-class FHStatusViewModel: NSObject {
-   
+struct FHStatusViewModel {
     var status : FHStatues?
     var createDateTime : String?
     var createSource : String?
@@ -17,48 +16,31 @@ class FHStatusViewModel: NSObject {
     var pic_Count : Int?
     var entireRetweet : String?
     
-    init(status: FHStatues)
-    {
-        super.init()
-        self.status = status
-        if let createDateTime = self.status?.created_at
-        {
+    init(status: FHStatues) {
+        self.status = status // FIXME: Remove status property if have time
+        if let createDateTime = self.status?.created_at {
            self.createDateTime = FHDateTool.fh_date(dateTimeString: createDateTime)
-            
         }
       
-        // multiple conditions in if statement AND(&&)   OR(||)
-        if let source = status.source{
-            
-            if source != "" {
+        // MARK:- Source
+        if let source = status.source, source != "" {
                 let startedIndex = (source as NSString).range(of: ">").location + 1
                 let length = (source as NSString).range(of: "</").location - startedIndex
-                
                 self.createSource = "from " + (source as NSString).substring(with: NSMakeRange(startedIndex, length))
-            }
         }
         
-        
-        //pic_URls
-    
+        // MARK:- Picture URL
         if let pic_URLs = status.pic_urls?.count == 0 ? status.retweeted_status?.pic_urls : status.pic_urls{
-            
             self.pic_URLs = pic_URLs
-            
             self.pic_Count = pic_URLs.count
-        }
-        else
-        {
-            
+        } else {
             self.pic_URLs = []
             self.pic_Count = 0
         }
         
-        
-        //Retweeted_status
+        // MARK:- Retweeted Status
         if let retweetedUserName = status.retweeted_status?.user?.name , let retweetedText = status.retweeted_status?.text{
             self.entireRetweet = "@"+retweetedUserName+": " + retweetedText
         }
     }
-    
 }

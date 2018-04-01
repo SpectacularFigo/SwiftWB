@@ -8,7 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		280C30551E562E78001AC165 /* FHNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280C30541E562E78001AC165 /* FHNetworkManager.swift */; };
-		280C30571E56305A001AC165 /* FHStatues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280C30561E56305A001AC165 /* FHStatues.swift */; };
+		280C30571E56305A001AC165 /* StatusCollection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 280C30561E56305A001AC165 /* StatusCollection.swift */; };
 		281B6D571E4A2D7E0021990A /* FHBaseTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281B6D561E4A2D7E0021990A /* FHBaseTableViewController.swift */; };
 		281B6D591E4A2DC60021990A /* FHHomeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281B6D581E4A2DC60021990A /* FHHomeTableViewController.swift */; };
 		281B6D9A1E4A62EE0021990A /* UIBarButtonItem-Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 281B6D991E4A62EE0021990A /* UIBarButtonItem-Extension.swift */; };
@@ -36,7 +36,6 @@
 		28D441D71E4A121A0068AE43 /* Search.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D441D61E4A121A0068AE43 /* Search.storyboard */; };
 		28D441DA1E4A123A0068AE43 /* Me.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 28D441D81E4A123A0068AE43 /* Me.storyboard */; };
 		28E5ABD71E6E5F05002F0AEF /* FHHomeCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28E5ABD61E6E5F05002F0AEF /* FHHomeCell.swift */; };
-		28FBAE0A1E6E282800E651E7 /* FHUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FBAE091E6E282800E651E7 /* FHUser.swift */; };
 		28FBAE0C1E6E2F9300E651E7 /* FHStatusViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 28FBAE0B1E6E2F9300E651E7 /* FHStatusViewModel.swift */; };
 		A6A2A45E9EB02D5FA50E62EF /* Pods_SwiftWB.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CF94E1C255911F976DC9A349 /* Pods_SwiftWB.framework */; };
 		DD84FFC1A44A86859C750D0B /* Pods_SwiftWBUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35A899D69277132E67D80E2A /* Pods_SwiftWBUITests.framework */; };
@@ -64,7 +63,7 @@
 		18AF9B6012943FC87CFB6CDD /* Pods-SwiftWBTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWBTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWBTests/Pods-SwiftWBTests.debug.xcconfig"; sourceTree = "<group>"; };
 		20BEE375118930B187016488 /* Pods-SwiftWB.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWB.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWB/Pods-SwiftWB.debug.xcconfig"; sourceTree = "<group>"; };
 		280C30541E562E78001AC165 /* FHNetworkManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHNetworkManager.swift; sourceTree = "<group>"; };
-		280C30561E56305A001AC165 /* FHStatues.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHStatues.swift; sourceTree = "<group>"; };
+		280C30561E56305A001AC165 /* StatusCollection.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StatusCollection.swift; sourceTree = "<group>"; };
 		281B6D561E4A2D7E0021990A /* FHBaseTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHBaseTableViewController.swift; sourceTree = "<group>"; };
 		281B6D581E4A2DC60021990A /* FHHomeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHHomeTableViewController.swift; sourceTree = "<group>"; };
 		281B6D991E4A62EE0021990A /* UIBarButtonItem-Extension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIBarButtonItem-Extension.swift"; path = "../Category/UIBarButtonItem-Extension.swift"; sourceTree = "<group>"; };
@@ -98,7 +97,6 @@
 		28D441D61E4A121A0068AE43 /* Search.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = Search.storyboard; path = SwiftWB/Search.storyboard; sourceTree = SOURCE_ROOT; };
 		28D441D91E4A123A0068AE43 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Me.storyboard; sourceTree = "<group>"; };
 		28E5ABD61E6E5F05002F0AEF /* FHHomeCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHHomeCell.swift; sourceTree = "<group>"; };
-		28FBAE091E6E282800E651E7 /* FHUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHUser.swift; sourceTree = "<group>"; };
 		28FBAE0B1E6E2F9300E651E7 /* FHStatusViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FHStatusViewModel.swift; sourceTree = "<group>"; };
 		32B81FDE96CC30281EF8DFA0 /* Pods-SwiftWBTests.debug copy.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SwiftWBTests.debug copy.xcconfig"; path = "Pods/Target Support Files/Pods-SwiftWBTests/Pods-SwiftWBTests.debug copy.xcconfig"; sourceTree = "<group>"; };
 		35A899D69277132E67D80E2A /* Pods_SwiftWBUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SwiftWBUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -189,9 +187,9 @@
 		28219B271E4A7A1300BF7F32 /* Tool */ = {
 			isa = PBXGroup;
 			children = (
+				281B6D991E4A62EE0021990A /* UIBarButtonItem-Extension.swift */,
 				2847885E1E4CC04C004653D1 /* Constants.swift */,
 				28219B2A1E4A7A5A00BF7F32 /* FHTitleButton.swift */,
-				281B6D991E4A62EE0021990A /* UIBarButtonItem-Extension.swift */,
 				280C30541E562E78001AC165 /* FHNetworkManager.swift */,
 				28AE86AE1E5B847900384A93 /* FHDateTool.swift */,
 				28B56D5B1E7A369800DCEE16 /* FHAccountTool.swift */,
@@ -288,8 +286,7 @@
 		28D441B41E4A0BB90068AE43 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				280C30561E56305A001AC165 /* FHStatues.swift */,
-				28FBAE091E6E282800E651E7 /* FHUser.swift */,
+				280C30561E56305A001AC165 /* StatusCollection.swift */,
 				28FBAE0B1E6E2F9300E651E7 /* FHStatusViewModel.swift */,
 			);
 			path = Model;
@@ -722,9 +719,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				280C30571E56305A001AC165 /* FHStatues.swift in Sources */,
+				280C30571E56305A001AC165 /* StatusCollection.swift in Sources */,
 				28AE86AF1E5B847900384A93 /* FHDateTool.swift in Sources */,
-				28FBAE0A1E6E282800E651E7 /* FHUser.swift in Sources */,
 				28969BDD1E51073800C1165F /* FHUserAccount.swift in Sources */,
 				280C30551E562E78001AC165 /* FHNetworkManager.swift in Sources */,
 				28969B981E4F6C1A00C1165F /* FHVisitorView.swift in Sources */,

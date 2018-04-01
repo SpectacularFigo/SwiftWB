@@ -69,6 +69,7 @@ extension FHHomeTableViewController {
         self.requestStatuses()
     }
     
+  
     func loadMoreTweets() {
         let access_token = FHAccountTool.accessToken()
         guard let accessTokenTemp = access_token else { return }
@@ -78,19 +79,22 @@ extension FHHomeTableViewController {
         }
         let parameter = ["access_token": accessTokenTemp, "since_id": max_id] as [String: Any]
         
-        FHNetworkManager.sharedNetworkManager.fh_requestStatuses(parameter) { [weak self] fh_JSONStatuses,error in
-            guard let JSONStatues = fh_JSONStatuses else { return } // FIXME: Error Handling
-            for i in 0..<JSONStatues.count {
-                let statusTemp = JSONStatues[i] as! [String: AnyObject]
-                let status = FHStatues(dict: statusTemp)
-                let statusViewModel = FHStatusViewModel(status: status)
-                self?.statusViewModelArray.append(statusViewModel)
+        FHNetworkManager.sharedInstance.requestStatusCollection(parameter) { [weak self] statusArray,error in
+            if let statusArray = statusArray {
+                for status in statusArray {
+                    let statusViewModel = FHStatusViewModel(status: status)
+                    self?.statusViewModelArray.append(statusViewModel)
+                }
+                self?.tableView.reloadData()
+                self?.tableView.tableFooterView?.isHidden = true
             }
-            self?.tableView.reloadData()
-            self?.tableView.tableFooterView?.isHidden = true
+            if let error = error {
+                print(error) // FIXME: Error Handling
+            }
         }
     }
-    
+
+
     func requestStatuses() {
         let access_token = FHAccountTool.accessToken()
         guard let accessTokenTemp = access_token else {
@@ -103,18 +107,20 @@ extension FHHomeTableViewController {
         }
         let parameter = ["access_token": accessTokenTemp, "since_id": since_id] as [String: Any]
         
-        FHNetworkManager.sharedNetworkManager.fh_requestStatuses(parameter) { fh_JSONStatuses, _ in
-            guard let JSONStatues = fh_JSONStatuses else { return } // FIXME: Error Handling
-            var tempStatusViewModelArray = [FHStatusViewModel]()
-            for i in 0..<JSONStatues.count {
-                let statusTemp = JSONStatues[i] as! [String: AnyObject]
-                let status = FHStatues(dict: statusTemp)
-                let statusViewModel = FHStatusViewModel(status: status)
-                tempStatusViewModelArray.append(statusViewModel)
+        FHNetworkManager.sharedInstance.requestStatusCollection(parameter) { (statusArray,error) in
+            if let statusArray = statusArray {
+                var tempStatusViewModelArray = [FHStatusViewModel]()
+                for status in statusArray {
+                    let statusViewModel = FHStatusViewModel(status: status)
+                    tempStatusViewModelArray.append(statusViewModel)
+                }
+                self.statusViewModelArray = tempStatusViewModelArray + self.statusViewModelArray
+                self.tableView.reloadData()
+                self.refreshControl?.endRefreshing()
             }
-            self.statusViewModelArray = tempStatusViewModelArray + self.statusViewModelArray
-            self.tableView.reloadData()
-            self.refreshControl?.endRefreshing()
+            if let error = error {
+                print(error) // FIXME: Error Handling
+            }
         }
     }
 }
