@@ -69,7 +69,7 @@ extension FHHomeTableViewController {
     }
 }
 
-// MARK:- Network Request
+// MARK: - Events
 extension FHHomeTableViewController {
      fileprivate func loadMoreTweets() {
         let access_token = FHAccountTool.accessToken()

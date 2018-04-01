@@ -1,0 +1,12 @@
+
+/* Class = "UITabBarItem"; title = "Search"; ObjectID = "RT3-V1-vtf"; */
+"RT3-V1-vtf.title" = "Search";
+
+/* Class = "UITabBarItem"; title = "Me"; ObjectID = "bYD-Dw-eOT"; */
+"bYD-Dw-eOT.title" = "Me";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "g4V-3L-cQ8"; */
+"g4V-3L-cQ8.title" = "Home";
+
+/* Class = "UITabBarItem"; title = "Message"; ObjectID = "zmU-lj-Y2T"; */
+"zmU-lj-Y2T.title" = "Message";

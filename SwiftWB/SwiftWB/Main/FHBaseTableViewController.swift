@@ -9,7 +9,11 @@
 import UIKit
 
 class FHBaseTableViewController: UITableViewController {
-    fileprivate var isLogin : Bool {
+    
+    fileprivate lazy var vistorView = FHVisitorView.visitorView()
+    
+    /// Check if the first time app is launched
+    var isLogin : Bool {
         var savePath = NSSearchPathForDirectoriesInDomains(.documentDirectory, .userDomainMask, true).first!
         savePath = (savePath as NSString).appendingPathComponent("account.plist")
         let account = NSKeyedUnarchiver.unarchiveObject(withFile: savePath) as? FHUserAccount
@@ -20,7 +24,7 @@ class FHBaseTableViewController: UITableViewController {
         }
     }
     
-    fileprivate lazy var vistorView = FHVisitorView.visitorView()
+   
     
     // MARK:- Life Cycyle
     override func loadView() {

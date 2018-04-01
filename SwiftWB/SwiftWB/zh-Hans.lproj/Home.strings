@@ -1,0 +1,30 @@
+
+/* Class = "UILabel"; text = "Time"; ObjectID = "4rM-Zk-fgW"; */
+"4rM-Zk-fgW.text" = "Time";
+
+/* Class = "UILabel"; text = "Source"; ObjectID = "CIb-yh-jUY"; */
+"CIb-yh-jUY.text" = "Source";
+
+/* Class = "UINavigationItem"; title = "Home"; ObjectID = "G9s-Nq-eeN"; */
+"G9s-Nq-eeN.title" = "Home";
+
+/* Class = "UIButton"; normalTitle = "Comment"; ObjectID = "OOi-v8-3I3"; */
+"OOi-v8-3I3.normalTitle" = "Comment";
+
+/* Class = "UILabel"; text = "Name"; ObjectID = "S9U-kV-l2m"; */
+"S9U-kV-l2m.text" = "Name";
+
+/* Class = "UILabel"; text = "Retweeted Tweet"; ObjectID = "WF0-HZ-Yyf"; */
+"WF0-HZ-Yyf.text" = "Retweeted Tweet";
+
+/* Class = "UITabBarItem"; title = "Home"; ObjectID = "aFx-VM-36i"; */
+"aFx-VM-36i.title" = "Home";
+
+/* Class = "UIButton"; normalTitle = "Retweet"; ObjectID = "fhh-6x-0OX"; */
+"fhh-6x-0OX.normalTitle" = "Retweet";
+
+/* Class = "UILabel"; text = "Original Tweet"; ObjectID = "jBV-5M-wFH"; */
+"jBV-5M-wFH.text" = "Original Tweet";
+
+/* Class = "UIButton"; normalTitle = "Like"; ObjectID = "s4r-5h-Gjw"; */
+"s4r-5h-Gjw.normalTitle" = "Like";
