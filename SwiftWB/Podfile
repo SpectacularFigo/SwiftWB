@@ -8,7 +8,6 @@ target 'SwiftWB' do
 pod ‘SDWebImage’
 pod ‘SVProgressHUD’
 pod 'Alamofire'
-pod ‘YYKit’
   # Pods for SwiftWB
 
   target 'SwiftWBTests' do
