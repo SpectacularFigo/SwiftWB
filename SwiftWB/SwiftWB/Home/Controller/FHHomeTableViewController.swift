@@ -33,7 +33,7 @@ class FHHomeTableViewController: FHBaseTableViewController {
     }
 }
 
-// MARK: - Setups
+// MARK: - UI Setups
 extension FHHomeTableViewController {
     fileprivate func setupFooterView() {
         let footerView = FHHomeCellFooterView.footerView()
@@ -56,9 +56,8 @@ extension FHHomeTableViewController {
     }
 }
 
-// MARK: - Events
+// MARK:- UI Actions
 extension FHHomeTableViewController {
-    
     @objc fileprivate func titleButtonClick(titleButton: FHTitleButton) {
         print("TitleBUtton click")
         titleButton.isSelected = !titleButton.isSelected // Default is NO
@@ -68,9 +67,11 @@ extension FHHomeTableViewController {
         print("requestNeworMoreStatus")
         self.requestStatuses()
     }
-    
-  
-    func loadMoreTweets() {
+}
+
+// MARK:- Network Request
+extension FHHomeTableViewController {
+     fileprivate func loadMoreTweets() {
         let access_token = FHAccountTool.accessToken()
         guard let accessTokenTemp = access_token else { return }
         var max_id = "0"
@@ -95,7 +96,7 @@ extension FHHomeTableViewController {
     }
 
 
-    func requestStatuses() {
+    fileprivate func requestStatuses() {
         let access_token = FHAccountTool.accessToken()
         guard let accessTokenTemp = access_token else {
             print("There is not an access_token")
