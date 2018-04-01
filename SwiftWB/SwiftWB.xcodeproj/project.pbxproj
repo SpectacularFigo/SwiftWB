@@ -232,11 +232,11 @@
 		28D441831E4A08AA0068AE43 /* SwiftWB */ = {
 			isa = PBXGroup;
 			children = (
-				28219B271E4A7A1300BF7F32 /* Tool */,
-				28D441B21E4A0BB90068AE43 /* Home */,
 				281B6D551E4A2D6E0021990A /* Main */,
-				28969B951E4F6C1A00C1165F /* Visitor */,
+				28219B271E4A7A1300BF7F32 /* Tool */,
 				28054AD81E4C166800EB2AF8 /* OAuth */,
+				28D441B21E4A0BB90068AE43 /* Home */,
+				28969B951E4F6C1A00C1165F /* Visitor */,
 				28D441BA1E4A0BB90068AE43 /* Message */,
 				28D441BE1E4A0BB90068AE43 /* Search */,
 				28D441B61E4A0BB90068AE43 /* Me */,
@@ -267,9 +267,9 @@
 		28D441B21E4A0BB90068AE43 /* Home */ = {
 			isa = PBXGroup;
 			children = (
-				28D441B31E4A0BB90068AE43 /* Controller */,
 				28D441B41E4A0BB90068AE43 /* Model */,
 				28D441B51E4A0BB90068AE43 /* View */,
+				28D441B31E4A0BB90068AE43 /* Controller */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -885,13 +885,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Y48AW9LBLR;
 				INFOPLIST_FILE = SwiftWB/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FigoHan.SwiftWB1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = "Debug copy";
 		};
@@ -1025,13 +1026,14 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Y48AW9LBLR;
 				INFOPLIST_FILE = SwiftWB/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FigoHan.SwiftWB1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1043,12 +1045,13 @@
 				CLANG_ENABLE_MODULES = YES;
 				DEVELOPMENT_TEAM = Y48AW9LBLR;
 				INFOPLIST_FILE = SwiftWB/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.FigoHan.SwiftWB1;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
