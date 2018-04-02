@@ -5,3 +5,9 @@
   Created by Figo Han on 2018-04-01.
   Copyright © 2018 Figo Han. All rights reserved.
 */
+/// General
+"general_wordings_ok" = "好的";
+
+/// Apology Alert
+"apology_alert_title" = "抱歉";
+"apology_alert_body" = "SwiftWB 有些技术问题. 请稍后再试";

@@ -9,7 +9,7 @@
 import Alamofire
 import UIKit
 
-class FHHomeTableViewController: FHBaseTableViewController {
+class FHHomeTableViewController: FHBaseTableViewController, CanTriggerApologyAlert {
     
     // MARK: - LazyLoading
     fileprivate lazy var statusViewModelArray = [FHStatusViewModel]()
@@ -90,7 +90,8 @@ extension FHHomeTableViewController {
                 self?.tableView.tableFooterView?.isHidden = true
             }
             if let error = error {
-                print(error) // FIXME: Error Handling
+                debugPrint(error)
+                self?.popupApologyAlert(controller: self)
             }
         }
     }
@@ -120,7 +121,8 @@ extension FHHomeTableViewController {
                 self.refreshControl?.endRefreshing()
             }
             if let error = error {
-                print(error) // FIXME: Error Handling
+                debugPrint(error)
+                self.popupApologyAlert(controller: self)
             }
         }
     }
