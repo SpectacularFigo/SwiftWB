@@ -54,7 +54,7 @@ extension FHBaseTableViewController {
     
     @objc fileprivate func loginNavigationBarItemCick(){
         let navigationController = UINavigationController()
-        navigationController.addChildViewController(FHOAuthViewController())
+        navigationController.addChild(FHOAuthViewController())
         self.present(navigationController, animated: true, completion: nil)
     }
 }

@@ -27,7 +27,7 @@ class FHHomeTableViewController: FHBaseTableViewController, CanTriggerApologyAle
         setupFooterView()
         setupNavigationItem()
         setupRefreshControl()
-        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.rowHeight = UITableView.automaticDimension
         tableView.estimatedRowHeight = 200
         
     }
